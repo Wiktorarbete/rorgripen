@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakta oss – Nählstedt Rör & Svets AB</title>
+  <meta name="description" content="Kontakta Nählstedt Rör & Svets AB för gratis hembesök och offert. Ring 072-536 37 33 eller skicka ett meddelande. VVS-jour dygnet runt i Helsingborg.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Nählstedt Rör & Svets AB"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="tjanster.html">Tjänster</a></li>
+        <li><a href="om-oss.html">Om oss</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:+46725363733" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          072-536 37 33
+        </a>
+        <a href="kontakt.html" class="btn btn-accent">Kontakta oss</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Meny"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Kontakta oss</h1>
+      <p>Hör av dig för gratis hembesök och offert. Vi svarar så snart vi kan!</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="fade-in">
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:24px">Skicka ett meddelande</h3>
+          <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+            <div>
+              <label for="name">Namn *</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-row">
+              <div><label for="email">E-post *</label><input type="email" id="email" required></div>
+              <div><label for="phone">Telefon</label><input type="tel" id="phone"></div>
+            </div>
+            <div>
+              <label for="service-select">Typ av tjänst</label>
+              <select id="service-select">
+                <option value="">Välj tjänst...</option>
+                <option>Sanitet</option>
+                <option>Värmesystem</option>
+                <option>Service & Reparation</option>
+                <option>Licenssvets</option>
+                <option>Annat</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">Meddelande *</label>
+              <textarea id="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center;padding:16px">Skicka meddelande</button>
+          </form>
+          <div class="contact-success" id="contactSuccess">
+            <h3>Tack för ditt meddelande!</h3>
+            <p>Vi återkommer till dig så snart som möjligt.</p>
+          </div>
+        </div>
+        <div class="fade-in">
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:24px">Kontaktuppgifter</h3>
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <a href="tel:+46725363733">
+                <span class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+                <span><span class="contact-info-label">Telefon</span><span class="contact-info-value">072-536 37 33</span></span>
+              </a>
+            </div>
+            <div class="contact-info-item">
+              <a href="mailto:info@rorgripen.se">
+                <span class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                <span><span class="contact-info-label">E-post</span><span class="contact-info-value">info@rorgripen.se</span></span>
+              </a>
+            </div>
+            <div class="contact-info-item">
+              <a href="https://www.google.com/maps/search/?api=1&query=Kielergatan+16%2C+252+70+R%C3%A5%C3%A5" target="_blank" rel="noopener">
+                <span class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <span><span class="contact-info-label">Adress</span><span class="contact-info-value">Kielergatan 16, 252 70 Råå</span></span>
+              </a>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+              <span>
+                <span class="contact-info-label">Öppettider</span>
+                <span class="contact-info-value" style="font-size:0.9rem">Mån–Fre: 07:00–16:00</span>
+                <span style="font-size:0.85rem;color:var(--slate-600);display:block">Lör–Sön: Stängt</span>
+                <span style="font-size:0.85rem;color:var(--accent-500);font-weight:600;display:block">Jour 24/7</span>
+              </span>
+            </div>
+          </div>
+          <div class="contact-map" style="margin-top:24px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2215.8!2d12.7396!3d56.0466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKielergatan+16%2C+252+70+R%C3%A5%C3%A5!5e0!3m2!1ssv!2sse!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Karta"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="images/logo.png" alt="Nählstedt Rör & Svets AB"></div>
+          <p class="footer-desc">Professionella VVS-tjänster i Helsingborg och nordvästra Skåne. Vi erbjuder sanitet, värmesystem, service och licenssvets.</p>
+          <div class="footer-contact">
+            <a href="tel:+46725363733"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 072-536 37 33</a>
+            <a href="mailto:info@rorgripen.se"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@rorgripen.se</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kielergatan+16%2C+252+70+R%C3%A5%C3%A5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Kielergatan 16, 252 70 Råå</a>
+          </div>
+        </div>
+        <div>
+          <h4>Snabblänkar</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="tjanster.html">Tjänster</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Öppettider</h4>
+          <dl class="footer-hours">
+            <div class="row"><dt>Måndag – Fredag</dt><dd>07:00–16:00</dd></div>
+            <div class="row"><dt>Lördag – Söndag</dt><dd>Stängt</dd></div>
+            <div class="row"><dt>Akut jour</dt><dd class="accent">Jour 24/7</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2025 Nählstedt Rör & Svets AB. Alla rättigheter förbehållna.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // Contact form
+    function submitContact(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('contactSuccess').style.display = 'block';
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
